@@ -1,5 +1,14 @@
 return {
     {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        },
+    },
+    {
         "williamboman/mason.nvim",
         lazy = false,
         config = function()
@@ -41,11 +50,16 @@ return {
             require('mason-tool-installer').setup({
                 ensure_installed = {
                     'black',
-                    'isort',
                     'stylua',
                     'debugpy',
                 },
             })
         end,
+    },
+    {
+        "j-hui/fidget.nvim",
+        opts = {
+            -- options
+        },
     }
 }
